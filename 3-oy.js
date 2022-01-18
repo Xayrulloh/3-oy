@@ -210,6 +210,274 @@ readline.on('line', (data) => {
   else {setPromts(arr[++a])}
 })*/
 
+// 18.01) tests
+// test 1  true
+/*console.log((undefined == null) == (null >= 0));*/
+
+// test 2  RangeError
+/*function base (a = 10, b = base) {
+  return a + base(10)
+}
+console.log(base(20));*/
+
+// test 3  TypeError
+/*const plus = (a, b) => a * b
+console.log(plus(14n, 2));*/
+
+// test 4  1, 2, 3, 4, 5
+/*let i = 0
+let id = setInterval(() => {
+  console.log(++i);
+  if (i >= 5) clearInterval(id)
+}, 100)*/
+
+// test 5  ReferenceError
+/*let object = {
+  n1: 25,
+  n2: 10,
+  n3: 30,
+  n4: 5
+}
+Object.defineProperty(object, 'n3', {
+  enumerable: false,
+})
+let sum = Object.keys().reduce(() => acc + object[el], '')
+console.log(sum);*/
+
+// test 6  SyntaxError
+/*let i = 0
+for() {
+  if (i == 3) break
+  console.log(i++);
+}*/
+
+// test 7  56
+/*if (' ') {
+  let x = 89
+}
+;(function (n) {
+  this.x = n
+})(56)
+console.log(x);*/
+
+// test 8  3, 0
+/*let res = (b => b > (!b >= 1))(!true)
+let funcs = [
+  (n) => console.log(n * 2),
+  (n) => console.log(n + 3),
+]
+switch(res) {
+  default: funcs[+res](res)
+  case false: funcs[res + 1](res)
+  case true: funcs[res - 0](res)
+}*/
+
+// test 9  TypeError
+/*const parent = () => {
+  const x = 10
+  return function() {
+    x = 25
+    return () => {
+      let x = 10
+      return x
+    }
+  }
+}
+console.log(parent()()());*/
+
+// test 10  function
+/*let func = (callback, n) => {
+  return callback(() => n * n)
+}
+func((x) => {
+  console.log(typeof x);
+})*/
+
+// test 11  name, undefined, name, undefined
+/*function main({letter: A, word: B}, arr = []) {
+  let object = {
+    [A]: A,
+    B: B
+  }
+  for (let key in object) {
+    arr[arr.length] = object[A]
+    arr[arr.length] = object[B]
+  }
+  return arr
+}
+console.log(main({letter: 'Name', word: 'Surname'}));*/
+
+// test 12  false
+/*String.prototype.hasA = function() {
+  if ('a' in this) return true
+  else return false
+}
+let str = 'olma'
+console.log(str.hasA());*/
+
+// test 13  [1, 25, 3], [1, 2, 3]
+/*let arr1 = [1, 2, 3]
+let arr2 = [1, 2, 3]
+let copiedArr1 = arr1
+let copiedArr2 = [...arr2]
+copiedArr1[1] = 25
+copiedArr2[1] = 10
+console.log(arr1, arr2);*/
+
+// test 14  ReferenceError
+/*let mapped = letters.map((el, i, arr) => {
+  arr[arr.length - i - 1]
+})
+const letters = ['A', 'B', 'C', 'D']
+console.log(mapped);*/
+
+// test 15  ['|', '|', '|', '|', '|']
+/*let result = Array.from('h|a|c|k|e|r').filter(function(x, y, z) {
+  if (x == '|') return x + y
+})
+console.log(result);*/
+
+// test 16  anor
+/*global.meva = 'gilos'
+const main = () => {
+  this.meva = 'shoptoli'
+}
+function base() {
+  this.meva = 'anor'
+}
+base()
+main()
+console.log(meva);*/
+
+// test 17  Ali
+/*let person = {
+  firstName: 'Ali',
+  lastName: 'Holiqov',
+  getName (x) {
+    return this.firstName
+  }
+}
+console.log(person.getName());*/
+
+// test 18 undefined
+/*let person = {
+  firstName: 'Ali',
+  lastName: 'Holiqov',
+  set getName (x) {
+    this.lastName = x
+    return this.firstName
+  }
+}
+person.getName = 'Nosir'
+console.log(person.getName);*/
+
+// test 19  {surname: 'Hikmatov'}
+/*let person = {}
+Object.defineProperties(person, {
+  name: {
+    value: 'Halil',
+    writable: true
+  },
+  surname: {
+    value: 'Hikmatov',
+    enumerable: true
+  }
+})
+person.surname = 'Nosirov'
+console.log(person);*/
+
+// test 20  DCB
+/*let letters = ['A', 'B', 'C', 'D']
+let index = letters.some(el => el == 'C')
+let newLetters = letters.slice(index).reverse().join('')
+console.log(newLetters);*/
+
+// test 21  ['A0', 'B1', 'C2', 'D3']
+/*let letters = ['A', 'B', 'C', 'D']
+let mapped = letters.map((...elements) => {
+  return elements[0] + elements[1]
+})
+console.log(mapped);*/
+
+// test 22  true
+/*console.log(([5] - [2]) === 3);*/
+
+// test 23  3, 11, 2
+/*let array = [4, 5, 6]
+let object = {x: 4, y: 5, z: 6}
+let string = 'hello world'
+delete array[2]
+delete string[2]
+delete object['z']
+console.log(array.length, string.length, Object.keys(object).length);*/
+
+// test 24  55
+/*function main(call, n) {
+  return call ((x) => x * (n + 1))
+}
+let result = main((hello) => hello(5), 10)
+console.log(result);*/
+
+// test 25  SyntaxError
+/*let meva = 'olma'
+if (true) {
+  var meva = 'gilos'
+}
+console.log(meva);*/
+
+// test 26  TypeError
+/*let obj = {}
+Object.defineProperty(obj, 'x', {
+  value: 10,
+  enumerable: true,
+})
+Object.defineProperty(obj, 'x', {
+  value: 15,
+  enumerable: false,
+})
+console.log(obj);*/
+
+// test 27  [8, 9]
+/*let data = 'olma' && true || null
+let anotherData = data && [8, 9] || 3
+console.log(anotherData);*/
+
+// test 28  
+/*let nums = [7, 8, 9, 10]
+let sum = nums.reverse().splice(true).reduce((x, y, z, w) => {
+  return x * nums[nums.length - 1]
+})
+console.log(630 * 10);*/
+
+// test 29  20 20
+/*let x = null ?? 20
+let y = null || 20
+console.log(x, y);*/
+
+// test 30  
+/*console.log(+null >= !!' ');*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
