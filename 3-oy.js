@@ -457,7 +457,7 @@ console.log(x, y);*/
 // test 30  
 /*console.log(+null >= !!' ');*/
 
-// 18.01) exercise 1 
+// 18.01) homework 1 
 /*function wordPattern(pattern, word) {
   pattern = pattern.split('')
   word = word.split(' ')
@@ -476,19 +476,65 @@ console.log(x, y);*/
 console.log(wordPattern('abba', 'dog dog dog dog'));*/
 
 
-// 18.01) exercise 2
+// 18.01) homework 2
 /*function replacer(str, rep) {
+  let res = ''
   let b = 0
   for (let a = 0; a < str.length; a++) {
     if (str[a] === '*') {
-      str = str.replace('*', rep[b])
+      res += rep[b]
       b++
+    }else{
+      res += str[a]
     }
   }
-  return str
+  return res
 }
 console.log(replacer('H*kim se* qa*yerda*an', 'anys'));*/
 
+// 18.01) homework 3
+/*function leftRotations(str) {
+  let res = []
+  for (let a = 0; a < str.length; a++) {
+    let strcha = ''
+    for (let b = a; b < str.length; b++) {
+      strcha += str[b]
+    }
+    for (let c = 0; c < a; c++) {
+      strcha += str[c]
+    }
+    res[res.length] = strcha
+  }
+  return res
+}
+console.log(leftRotations('asd'));*/
+
+// 18.01) homework 4
+/*function smallestTransform(num) {
+  let middle = 0, countOfNumbers = 0, res = 0, closer = 0
+  num += ''
+  for (let a = 0; a < num.length; a++) middle += +num[a]
+  countOfNumbers = num.length
+  middle = middle / countOfNumbers | 0
+  if (!num.includes(middle)) {
+    let arr = []
+    for (let a = 0; a < num.length; a++) {
+      arr.push(Math.abs(middle - num[a]))
+    }
+    if (num.includes(middle + Math.min(...arr))) closer = middle + Math.min(...arr)
+    else closer = middle - Math.min(...arr)
+  }else{
+    closer = middle
+  }
+  for (let a = 0; a < num.length; a++) {
+    if (num[a] != closer) {
+      if (+num[a] < closer) res += closer - (+num[a])
+      else res += Math.abs(closer - (+num[a]))
+    }
+  }
+  return res
+}
+console.log(smallestTransform(1234));*/
 
 
 
