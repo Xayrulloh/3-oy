@@ -457,6 +457,40 @@ console.log(x, y);*/
 // test 30  
 /*console.log(+null >= !!' ');*/
 
+// 18.01) exercise 1 
+/*function wordPattern(pattern, word) {
+  pattern = pattern.split('')
+  word = word.split(' ')
+  if (pattern.length !== word.length) return false
+  let obj = {}
+  for (let a = 0; a < pattern.length; a++) {
+    if (obj[pattern[a]]) {
+      if (obj[pattern[a]] !== word[a]) return false
+    }else{
+      if (Object.values(obj).includes(word[a])) return false
+      obj[pattern[a]] = word[a]
+    }
+  }
+  return true
+}
+console.log(wordPattern('abba', 'dog dog dog dog'));*/
+
+
+// 18.01) exercise 2
+/*function replacer(str, rep) {
+  let b = 0
+  for (let a = 0; a < str.length; a++) {
+    if (str[a] === '*') {
+      str = str.replace('*', rep[b])
+      b++
+    }
+  }
+  return str
+}
+console.log(replacer('H*kim se* qa*yerda*an', 'anys'));*/
+
+
+
 
 
 
