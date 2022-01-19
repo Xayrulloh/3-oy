@@ -621,7 +621,27 @@ console.log(' fsafaf '.myTrim());*/
 }
 console.log('fdasfa'.mySplit('a'));*/
 
-
+// 19.01) homework 8
+/*function search(users, searched) {
+  let res = []
+  for(let a of users) {
+    let check = true
+    for (let b in searched) {
+      if (a[b] != searched[b]) check = false
+    }
+    if (check) res.push(a)
+  }
+  return res
+}
+let users = [
+  { name: 'ali', job: 'coder', age: 25, gender: 'male' },
+  { name: 'hikmat', job: 'coder', age: 20, gender: 'male' },
+  { name: 'abror', job: 'dentist', age: 12, gender: 'male' },
+  { name: 'malika', job: 'coder', age: 32, gender: 'female' },
+  { name: 'ali', job: 'designer', age: 24, gender: 'male' },
+  { name: 'hafsa', job: 'teacher', age: 20, gender: 'male' },
+]
+console.log(search(users, {age: 20, gender: 'male'}));*/
 
 
 
