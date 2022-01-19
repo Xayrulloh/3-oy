@@ -552,7 +552,74 @@ console.log(mapLetters('olma'));
 console.log(mapLetters('froggy'));
 console.log(mapLetters('dodo'));*/
 
+// 19.01) homework 1
+/*Array.prototype.myMap = function(callback) {
+  let res = []
+  for (let a = 0; a < this.length; a++) {
+    if (callback) res.push(callback(this[a]))
+    else return new Error('TypeError: undefined is not a function')
+  }
+}
+console.log([1, 2, 3, 4, 5].myMap());*/
 
+// 19.01) homework 2
+/*Array.prototype.myUnshift = function (...el) {
+  let res = [...this, ...el]
+  return res[res.length - 1]
+}
+console.log([1, 2, 3, 4, 5].unshift());
+console.log([1, 2, 3, 4, 5].myUnshift());*/
+
+// 19.01) homework 3
+/*Array.prototype.myShift = function () {
+  return this.splice(1, this.length)
+}
+console.log([1, 2, 3, 4, 5].myShift());*/
+
+// 19.01) homework 4
+/*Array.prototype.myPop = function () {
+  return this.splice(0, this.length - 1)
+}
+console.log([1, 2, 3, 4].myPop());*/
+
+// 19.01) homework 5
+/*Array.prototype.mySlice = function (start, end) {
+  let res = []
+  if (end < 0) end = this.length + end
+  if (start < 0) start = this.length + start
+  for (;start < end; start++) {
+    res.push(this[start])
+  }
+  return res
+}
+console.log([1, 2, 3, 4, 5].mySlice(-4, -2));*/
+
+// 19.01) homework 6
+/*String.prototype.myTrim = function () {
+  let res = this
+  res[0] === ' ' ? res = res.slice(1) : res 
+  res[res.length - 1] === ' ' ? res = res.slice(0, -1) : res
+  return res
+}
+console.log(' fsafaf '.myTrim());*/
+
+// 19.01) homework 7
+/*String.prototype.mySplit = function (str = '') {
+  const res = []
+  let simple = ''
+  for (let a = 0; a < this.length; a++) {
+    let el = this[a]
+    if (el === str || str === '' && simple) {
+      res.push(simple)
+      simple = ''
+    }
+    if (el !== str) simple += el
+  }
+  if (simple) res.push(simple)
+  simple = ''
+  return res
+}
+console.log('fdasfa'.mySplit('a'));*/
 
 
 
