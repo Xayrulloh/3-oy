@@ -643,11 +643,47 @@ let users = [
 ]
 console.log(search(users, {age: 20, gender: 'male'}));*/
 
+// 24.01) homework RGB
+/*class RGB {
+  constructor(R = 0, G = 0, B = 0) {
+    this.R = R
+    this.G = G
+    this.B = B
+  }
 
+  get red() {return this.R}
+  get green() {return this.G}
+  get blue() {return this.B}
 
+  set red(num) {if(num <= 255) this.R = num}
+  set green(num) {if(num <= 255) this.G = num}
+  set blue(num) {if(num <= 255) this.B = num}
+  
+  get colors() {
+    return `rgb(${this.R}, ${this.G}, ${this.B})`
+  }
+  
+  set colors(arr) {
+    if (arr[0] && arr[0]<=255) {this.R = arr[0]}
+    if (arr[1] && arr[1]<=255) {this.G = arr[1]}
+    if (arr[2] && arr[2]<=255) {this.B = arr[2]}
+  }
+}
 
-
-
+const rgb = new RGB(78)
+console.log(rgb.colors);
+console.log(rgb);
+rgb.red = 1000
+rgb.green = 45
+rgb.blue = 65
+console.log(rgb.colors);
+console.log(rgb);
+rgb.colors = [100, 100]
+console.log(rgb.colors);
+console.log(rgb);
+console.log(rgb.red);
+console.log(rgb.green);
+console.log(rgb.blue);*/
 
 
 
