@@ -11,6 +11,26 @@ class Calculator {
 		if (display.value[0] == '0' && display.value[1] != '.') {
 			display.value = ''
 		}
+		if (display.value.includes('✕')) {
+			if (display.value.split('✕')[1][0] == '0' && display.value.split('✕')[1][1] != '.') {
+				display.value = display.value.slice(0, -1)
+			}
+		}
+		if (display.value.includes('+')) {
+			if (display.value.split('+')[1][0] == '0' && display.value.split('+')[1][1] != '.') {
+				display.value = display.value.slice(0, -1)
+			}
+		}
+		if (display.value.includes('-')) {
+			if (display.value.split('-')[1][0] == '0' && display.value.split('-')[1][1] != '.') {
+				display.value = display.value.slice(0, -1)
+			}
+		}
+		if (display.value.includes('÷')) {
+			if (display.value.split('÷')[1][0] == '0' && display.value.split('÷')[1][1] != '.') {
+				display.value = display.value.slice(0, -1)
+			}
+		}
 	}
 
 	concatSigns(char, display) {
