@@ -645,32 +645,34 @@ console.log(search(users, {age: 20, gender: 'male'}));*/
 
 // 24.01) homework RGB
 /*class RGB {
-  constructor(R = 0, G = 0, B = 0) {
-    this.R = R
-    this.G = G
-    this.B = B
+  constructor(R, G, B) {
+    this.R = this.#check(R)||0
+    this.G = this.#check(G)||0
+    this.B = this.#check(B)||0
   }
+
+  #check(value) {return value >= 0 && value <= 255 ? value : null}
 
   get red() {return this.R}
   get green() {return this.G}
   get blue() {return this.B}
 
-  set red(num) {if(num <= 255) this.R = num}
-  set green(num) {if(num <= 255) this.G = num}
-  set blue(num) {if(num <= 255) this.B = num}
+  set red(num) {this.R = this.#check(num)||this.R}
+  set green(num) {this.G = this.#check(num)||this.G}
+  set blue(num) {this.B = this.#check(num)||this.B}
   
   get colors() {
     return `rgb(${this.R}, ${this.G}, ${this.B})`
   }
   
   set colors(arr) {
-    if (arr[0] && arr[0]<=255) {this.R = arr[0]}
-    if (arr[1] && arr[1]<=255) {this.G = arr[1]}
-    if (arr[2] && arr[2]<=255) {this.B = arr[2]}
+    this.R = this.#check(arr[0])||this.R
+    this.G = this.#check(arr[1])||this.G
+    this.B = this.#check(arr[2])||this.B
   }
 }
 
-const rgb = new RGB(78)
+const rgb = new RGB(75)
 console.log(rgb.colors);
 console.log(rgb);
 rgb.red = 1000
@@ -685,6 +687,20 @@ console.log(rgb.red);
 console.log(rgb.green);
 console.log(rgb.blue);*/
 
+// 25.01) exercise
+/*class ArrayInt extends Array {
+  constructor(...nums) {
+    super()
+    this.filtered = []
+    for (let a = 0; a < nums.length; a++) {
+      if(nums[a] === Math.round(nums[a])) this.filtered.push(nums[a])
+      else throw new Error('what hell are you doing').message
+    }
+  }
+  get return () { return this.filtered }
+}
+let arrayInt = new ArrayInt(0, 5, 1, 2, 3, )
+console.log(arrayInt.filtered);*/
 
 
 
