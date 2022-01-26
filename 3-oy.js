@@ -687,7 +687,7 @@ console.log(rgb.red);
 console.log(rgb.green);
 console.log(rgb.blue);*/
 
-// 25.01) exercise
+// 25.01) exercise 1
 /*class ArrayInt extends Array {
   constructor(...nums) {
     super()
@@ -702,7 +702,17 @@ console.log(rgb.blue);*/
 let arrayInt = new ArrayInt(0, 5, 1, 2, 3, )
 console.log(arrayInt.filtered);*/
 
-
+// 26.01) exercise 1
+/*class Char extends String {
+  constructor(value) {
+    if (value != String(value) || value.length != 1) {
+      throw new Error('what are you doing')
+    }
+    super(value)
+  }
+}
+let char = new Char('')
+console.log(char);*/
 
 
 
