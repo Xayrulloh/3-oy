@@ -32,4 +32,4 @@ class Timer {
 
 let timer = new Timer
 timer.start()
-timer.notify('16:46', 'Uygon dars boshlandi')
+timer.notify('20:32', 'Uygon dars boshlandi')
