@@ -714,12 +714,27 @@ console.log(arrayInt.filtered);*/
 let char = new Char('')
 console.log(char);*/
 
+// 27.01) exercise 1
+function allSiblings(li) {
+  let res = [], forup = li
+  while (forup.nextElementSibling != null) {
+    forup = forup.nextElementSibling
+    res.push(forup)
+  }
+  while (li.previousElementSibling != null) {
+    res.unshift(li)
+    li = li.previousElementSibling
+  }
+  res.unshift(li)
+  return res
+}
 
+let li = document.querySelector('.simple')
+console.log(allSiblings(li));
 
-
-
-
-
+HTMLElement.prototype.AllSiblings = function() {
+  
+}
 
 
 
