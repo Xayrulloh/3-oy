@@ -715,7 +715,7 @@ let char = new Char('')
 console.log(char);*/
 
 // 27.01) exercise 1
-function allSiblings(li) {
+/*function allSiblings(li) {
   let res = [], forup = li
   while (forup.nextElementSibling != null) {
     forup = forup.nextElementSibling
@@ -730,15 +730,7 @@ function allSiblings(li) {
 }
 
 let li = document.querySelector('.simple')
-console.log(allSiblings(li));
-
-HTMLElement.prototype.AllSiblings = function() {
-  
-}
-
-
-
-
+console.log(allSiblings(li));*/
 
 
 
