@@ -308,6 +308,77 @@ console.log(array.customSort((a, b) => a - b))*/
 // }
 // console.log(main);
 
+// console.log({} == {});
+
+// console.log(+[1, 2, 3] + +[1, 3, 4]);
+
+"use strict"
+
+// let map = new Map([
+//     [true, 'A'],
+//     ['true', 'B']
+// ])
+// console.log(map.get('true'));
+
+// class Shakl {
+//     constructor (uzunlik, balandlik) {
+//         this.uzunlik = uzunlik
+//         this.balandlik = balandlik
+//     }
+// }
+
+// class Aylana extends Shakl {
+//     constructor (uzunlik) {
+//         super(uzunlik, uzunlik)
+//         this.name = 'Aylana'
+//     }
+
+//     get yuza() {
+//         return this.uzunlik * this.balandlik
+//     }
+
+//     set yuza(qiymat) {
+//         this.uzunlik = qiymat
+//     }
+// }
+
+// const aylana = new Aylana(50)
+// aylana.yuza = 12
+// console.log(aylana.yuza);
+
+// class Mushukcha extends Object {
+//     constructor(ism) {
+//         this.name = ism
+//     }
+// }
+
+// let mushukcha = new Mushukcha('Garfield')
+// console.log(mushukcha);
+
+// console.log([1, 2, 3, 4, 5, 6, 7, 8, 9, 10].slice(0, 3));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
